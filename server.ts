@@ -14,6 +14,10 @@ class PegasiServer extends Server {
     this.app.use(bodyParser.urlencoded({ extended: true }));
     this.app.use(cors());
 
+    const usersController = new UsersController();
+
+    super.addControllers([usersController]);
+
     console.log("Starting server in development mode");
     const msg = "dev mode"
     this.app.get("*", (req, res) => res.send(msg));

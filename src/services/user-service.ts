@@ -3,6 +3,7 @@ import { User } from "src/models/user";
 import { userSchema } from "../validators/user-schema";
 
 export class UserService {
+  //TODO: Decouple these to a db handler
   collection: string = "users";
   db: string = "pegasiDB";
   uri: string =

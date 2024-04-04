@@ -11,7 +11,3 @@ export interface User {
 
   _id?: mongodb.ObjectId;
 }
-
-
-//nathalyvillamor6
-//eilsktw8WX7sBMoz

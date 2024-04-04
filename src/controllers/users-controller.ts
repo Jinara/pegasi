@@ -15,10 +15,8 @@ export class UsersController {
   private async get(req: Request, res: Response) {
     try {
       const user = await this.userService.getById(req.params.id);
-      console.log('Get: ' + req.params.id);
       return res.status(StatusCodes.OK).json(user);
     } catch (err: any) {
-      console.log(err, true);
       return res.status(StatusCodes.BAD_REQUEST).json({
         error: err.message,
       });
